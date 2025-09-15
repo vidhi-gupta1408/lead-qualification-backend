@@ -478,7 +478,7 @@ export default function Home() {
             </div>
           </CardHeader>
           <CardContent className="p-0">
-            {resultsQuery.data?.data?.length > 0 ? (
+            {resultsQuery.data?.data?.length ? (
               <div className="overflow-x-auto">
                 <Table>
                   <TableHeader className="bg-muted/30">
@@ -492,7 +492,7 @@ export default function Home() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {resultsQuery.data.data.map((result: any, index: number) => (
+                    {resultsQuery.data?.data?.map((result: any, index: number) => (
                       <TableRow key={result.id} className="hover:bg-muted/20" data-testid={`row-lead-${index}`}>
                         <TableCell>
                           <div>
@@ -559,11 +559,11 @@ export default function Home() {
               </div>
             )}
             
-            {resultsQuery.data?.data?.length > 0 && (
+            {resultsQuery.data?.data?.length && (
               <div className="p-6 border-t border-border">
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-muted-foreground">
-                    Showing {resultsQuery.data.data.length} results
+                    Showing {resultsQuery.data?.data?.length || 0} results
                   </div>
                   <div className="flex items-center space-x-2">
                     <Button variant="outline" size="sm" data-testid="button-previous">
