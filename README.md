@@ -363,3 +363,8 @@ Remember to set environment variables in your deployment platform.
 - For production use, consider adding database persistence
 - The AI scoring provides intelligent context analysis beyond simple rule matching
 - All API responses include proper error handling and validation
+
+## 📸 Screenshots
+
+![](screenshots/Screenshot%202025-09-16%20021615.png)
+![](screenshots/Screenshot%202025-09-16%20021628.png)
